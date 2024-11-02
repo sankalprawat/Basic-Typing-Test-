@@ -1,0 +1,172 @@
+/* Page Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6; /* Light mode background */
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for dark mode */
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #e6e6e6; /* Text color in dark mode */
+}
+
+h1 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.content {
+    background-color: #fff; /* Light mode content background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    transition: background-color 0.5s, box-shadow 0.5s; /* Transition for dark mode */
+}
+
+body.dark-mode .content {
+    background-color: #1e1e1e; /* Dark mode content background */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#paragraph {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    background: #f9f9f9; /* Light mode paragraph background */
+    padding: 20px;
+    border-radius: 8px;
+    white-space: normal; /* Allow text to wrap normally */
+    overflow: auto; /* Allow scrolling if the text exceeds the height */
+    max-height: 200px; /* Limit height for better aesthetics */
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for dark mode */
+}
+
+body.dark-mode #paragraph {
+    background: #333; /* Dark mode paragraph background */
+    color: #e6e6e6; /* Text color in dark mode */
+}
+
+#inputBox {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Light mode border */
+    border-radius: 8px;
+    white-space: pre-wrap; /* Enable word wrapping for input */
+    transition: box-shadow 0.2s ease-in-out, border 0.2s; /* Transition for input focus */
+}
+
+body.dark-mode #inputBox {
+    border: 1px solid #555; /* Dark mode border */
+    background-color: #222; /* Dark mode input background */
+    color: #e6e6e6; /* Text color in dark mode */
+}
+
+#inputBox:focus {
+    box-shadow: 0px 0px 10px rgba(100, 150, 250, 0.4);
+    outline: none;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1em;
+    color: #555; /* Light mode stats color */
+    margin: 20px 0;
+}
+
+body.dark-mode .stats {
+    color: #ddd; /* Dark mode stats color */
+}
+
+#timer {
+    color: #ff5555;
+}
+
+.dropdown {
+    margin: 10px 0;
+}
+
+select {
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
+/* Toggle Button Styling */
+.toggle-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    margin: 10px;
+}
+
+.toggle-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.toggle-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Popup Window Styling */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff; /* Light mode popup background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.5s; /* Transition for dark mode */
+    display: none;
+}
+
+body.dark-mode #popup {
+    background-color: #333; /* Dark mode popup background */
+    color: #e6e6e6; /* Text color in dark mode */
+}
+
+#popup.show {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#popup h2 {
+    color: #333; /* Light mode heading color */
+}
+
+body.dark-mode #popup h2 {
+    color: #e6e6e6; /* Dark mode heading color */
+}
+
+#popup p {
+    font-size: 1em;
+    color: #555; /* Light mode paragraph color */
+    margin: 10px 0;
+}
+
+body.dark-mode #popup p {
+    color: #ddd; /* Dark mode paragraph color */
+}
