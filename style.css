@@ -21,6 +21,11 @@ h1 {
     margin: 10px 0;
 }
 
+h1.dark-mode {
+    color: #e6e6e6;
+    margin: 10px 0;
+}
+
 .content {
     background-color: #fff; /* Light mode content background */
     border-radius: 10px;
@@ -95,8 +100,39 @@ body.dark-mode .stats {
 }
 
 .dropdown {
-    margin: 10px 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
+
+.dropdown label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.dropdown select {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #fff; /* Light background */
+    color: #333; /* Dark text */
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.dropdown select:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.dropdown select option {
+    padding: 10px;
+}
+
+.dropdown select:hover {
+    background-color: #f0f0f06e; /* Light gray on hover */
+}
+
 
 select {
     padding: 5px 10px;
@@ -169,4 +205,58 @@ body.dark-mode #popup h2 {
 
 body.dark-mode #popup p {
     color: #ddd; /* Dark mode paragraph color */
+}
+
+/* Popup Button Styling */
+#popup button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect */
+#popup button:hover {
+    background-color: #45a049; /* Slightly darker green */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Lift up effect */
+}
+
+/* Active state */
+#popup button:active {
+    background-color: #3e8e41; /* Even darker green */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+    transform: translateY(1px); /* Slight push down effect */
+}
+
+/* Focus outline for accessibility */
+#popup button:focus {
+    outline: 3px solid #a2e7b3; /* Light green outline */
+}
+
+/* Dark Mode Button */
+body.dark-mode #popup button {
+    background-color: #333; /* Dark background */
+    color: #f4f4f4; /* Light text color */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+body.dark-mode #popup button:hover {
+    background-color: #555; /* Lighter gray on hover */
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.15); /* Stronger shadow on hover */
+}
+
+body.dark-mode #popup button:active {
+    background-color: #444; /* Darker gray on active */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2); /* Reduced shadow on click */
+}
+
+body.dark-mode #popup button:focus {
+    outline: 3px solid #a2e7b3; /* Retain focus color */
 }
